@@ -1,0 +1,65 @@
+# ---------------------------
+# Python build / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+*.log
+.Python
+*.sqlite3
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Local environment files
+.env
+.env.*
+
+# Model weights and large files
+*.bin
+*.pt
+*.ckpt
+*.h5
+*.pth
+*.safetensors
+
+# Cache folders (Hugging Face, datasets, etc.)
+cache/
+output/
+runs/
+logs/
+datasets/
+hf_cache/
+~$*
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node / React (for later stages)
+node_modules/
+dist/
+build/
+*.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Generated test outputs
+*.out
+*.tmp
+*.bak
