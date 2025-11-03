@@ -1,32 +1,36 @@
-# AI Image Caption Generator
+# 🧠 AI Image Caption Generator
 
-An AI-powered web app that describes any image using a pretrained **BLIP (Vision-Language) model**.
-Built in Python with **PyTorch**, **Transformers**, and **Streamlit**.
+An **AI-powered local app** that generates human-like descriptions for images using a **Vision + Language** model (BLIP).  
+This project was built as part of my mission to **understand how AI models connect visual perception and natural language**.
+
+---
+
+## 🎯 Goals & Learning Outcomes
+
+This project was designed to help me learn:
+
+- How **Computer Vision (ViT)** and **Natural Language Processing (GPT)** combine into multimodal AI
+- How to perform **inference** efficiently on GPU (CUDA)
+- How to control model **generation parameters** like `temperature`, `top_k`, and `top_p`
+- How to extend a Python AI project into a **full-stack app** (FastAPI backend + React frontend)
 
 ---
 
 ## 🚀 Features
 
-- Upload any image or use drag-and-drop
-- GPU-accelerated inference (CUDA supported)
-- Adjustable **creativity (temperature)** and decoding parameters
-- Clean Streamlit interface
-- Ready for extension (translation, FastAPI backend, React UI)
+✅ Upload any image or drag & drop  
+✅ Real-time caption generation using BLIP  
+✅ GPU-accelerated inference (CUDA compatible)  
+✅ Adjustable parameters:
+
+- **Temperature** — controls creativity  
+  ✅ FastAPI + React integration
 
 ---
 
-## 🧩 Tech Stack
+## 🛠️ Setup & Run (Local Only)
 
-- **Python 3.13**
-- **PyTorch + CUDA**
-- **Hugging Face Transformers**
-- **Streamlit**
-
----
-
-## 🛠️ Setup
-
-### 1. Clone the repo
+### 1️⃣ Clone the repository
 
 ```bash
 git clone https://github.com/<yourusername>/AI-Image-Caption-Generator.git
@@ -46,18 +50,33 @@ py -3.13 -m venv .venv
 pip install -r requirements.txt
 ```
 
-### 4. Run the app
+### 4. Run the FastAPI server
 
 ```bash
-streamlit run app_streamlit.py
+uvicorn server.main:app --reload
 ```
 
-Then open the link in your browser (usually http://localhost:8501).
+The API will start at http://127.0.0.1:8000
 
 ---
 
+### Frontend Setup (React)
+
+Open a new terminal and run:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+The React app will start at http://localhost:5173
+
 ## 🧠 How It Works
 
-1. The BLIP model encodes the image (Vision Transformer)
-2. A text decoder predicts one word at a time to describe the image
-3. You control randomness via the temperature slider
+1. The image is uploaded from the React frontend.
+2. FastAPI receives the image file and passes it to the BLIP model.
+3. The model encodes visual features (ViT encoder).
+4. The text decoder (GPT-style) generates a caption token by token.
+5. Sampling parameters (temperature) adjust the style of generation.
+6. The final caption is returned to the frontend and displayed to the user.

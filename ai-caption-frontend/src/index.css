@@ -1,0 +1,110 @@
+body {
+  font-size: 20px;
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  background: rgb(14, 17, 23);
+  color: white;
+}
+
+.app {
+  margin-top: 5rem;
+}
+
+.controls {
+  margin: 2rem 0;
+}
+
+.hero {
+  width: 52rem;
+  margin: 0 auto;
+}
+
+.hero > h1 {
+  font-size: 3rem;
+}
+
+.upload-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: rgb(38, 39, 48);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+  text-align: start;
+}
+
+.left-side > svg {
+  width: 2.5rem;
+  margin: 0 1rem 0 0;
+}
+
+.details > h4 {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.details > p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(250, 250, 250, 0.6);
+}
+
+.right-side > button {
+  z-index: 2;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: white;
+  background-color: rgb(19, 23, 32);
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.right-side > button:hover {
+  background-color: rgba(172, 177, 195, 0.15);
+}
+
+.preview-heading {
+  margin-bottom: 0;
+  text-align: start;
+  color: rgba(250, 250, 250, 0.6);
+}
+
+.preview {
+  margin-top: 1rem;
+  max-width: 52rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.generate-button {
+  margin: 2rem 0;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: white;
+  background-color: rgb(19, 23, 32);
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.generate-button:hover {
+  background-color: rgba(172, 177, 195, 0.15);
+}
+
+.caption {
+  text-align: start;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: rgba(61, 213, 109, 0.2);
+}
